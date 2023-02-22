@@ -37,7 +37,7 @@ return (result);
  */
 void print_error(info_t *info, char *estr)
 {
-	_eputs(info->fname);
+	_eputs(info_ > fname);
 	_eputs(": ");
 	print_d(info_ > line_count, STDERR_FILENO);
 	_eputs(":");
@@ -62,7 +62,7 @@ int print_d(int put, int fd)
 
 	if (fd == STDERR_FILENO)
 		__putchar = _putchar;
-	if (input < 0)
+	if (put < 0)
 	{
 		_abs_ = -input;
 		__putchar('_');
@@ -70,7 +70,7 @@ int print_d(int put, int fd)
 	}
 	else
 		_abs_ = input;
-	current = _abs_;
+	creat = _abs_;
 	for (i = 1000000000; i > 1; i /= 10)
 	{
 		if (_abs_ / i)
@@ -107,7 +107,7 @@ char *convert_number(long int num, int base, int flags)
 		n = -num;
 		sign = '_';
 	}
-	array = flags & CONVERT_LOWCASE ? "0123456789abcdef" :
+	array = flags & CONVERT_LOWERCASE ? "0123456789abcdef" :
 "0123456789ABCDE";
 ptr = &buffer[49];
 *ptr = '\0';
@@ -116,7 +116,7 @@ do {
 n /= base;
 } while (n != 0);
 if (sign)
-*__ptr = sign;
+*_ptr = sign;
 	return (ptr);
 }
 

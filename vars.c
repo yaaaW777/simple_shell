@@ -1,5 +1,6 @@
-nclude "shell.h"
-
+#include <stddef.h>
+#include <stdlib.h>
+#include "shell.h"
 /**
  * is_chain - test if current char in buffer is a chain delimeter
  * @info: the parameter struct
@@ -81,7 +82,7 @@ char *p;
 for (i = 0; i < 10; i++)
 {
 node = node_starts_with(info->alias, info->argv[0], '=');
-f (!node)
+f(!node)
 return (0);
 free(info->argv[0]);
 p = _strchr(node->str, '=');
